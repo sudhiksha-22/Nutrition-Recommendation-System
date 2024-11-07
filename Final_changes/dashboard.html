@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Nutrivision</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #ffffff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #6b8455;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #6b8455;
+        }
+
+        a {
+            all: unset;
+        }
+
+
+        /* Sign Up Button Styling */
+        .signup-btn {
+            background-color: #6b8455;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .reco-btn {
+            background-color: #6b8455;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .signup-btn:hover {
+            background-color: #58819e;
+        }
+
+        /* Profile Picture and Dropdown Styling */
+        .profile-pic-container {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .profile-pic {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid #6b8455;
+            object-fit: cover;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f0f0f0;
+            color: #6b8455;
+        }
+
+        /* Show dropdown on hover */
+        .profile-pic-container:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Dashboard Content Styling */
+        .dashboard-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 100px;
+        }
+
+        /* User Info and Diet Logs Section */
+        .left-content {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+        }
+
+        .user-info,
+        .diet-logs {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .user-info h2,
+        .diet-logs h2 {
+            font-size: 2rem;
+            color: #6b8455;
+            margin-bottom: 20px;
+        }
+
+        .user-details p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .user-details p span {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Diet Logs Styling */
+        .diet-log {
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .diet-log h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .diet-log p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .total-calories {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #6b8455;
+        }
+
+        /* BMI Chart Styling */
+        .bmi-chart {
+            width: 35%;
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+        }
+
+        .bmi-chart h3 {
+            color: #6b8455;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .chart {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            background-color: #f8f4ef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b8455;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logout-btn {
+            background-color: #b91c1c;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-weight: 600;
+            color: white;
+            border: 1px solid #b91c1c;
+        }
+
+        .logout-btn:hover {
+            background-color: white;
+            color: #b91c1c;
+            border: 1px solid #b91c1c;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>NUTRIVISION</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Menu</a>
+            <a href="#">Promo</a>
+            <a href="/signup" class="signup-btn">Sign Up</a>
+            <a href="/recommendation" class="reco-btn">Recommendation</a>
+        </nav>
+
+        <a href="/logout" class="logout-btn">Logout</a>
+    </header>
+
+    <!-- Dashboard Content -->
+    <section class="dashboard-content">
+        <!-- Left Content: User Information and Diet Logs -->
+        <div class="left-content">
+            <!-- User Information Section -->
+            <div class="user-info">
+                <h2>User Profile</h2>
+                <div class="user-details">
+                    <p><span>ID:</span> {{user.id}}</p>
+                    <p><span>Name:</span> {{profile.Name}}</p>
+                    <p><span>Age:</span> {{profile.Age}}</p>
+                    <p><span>Height:</span> {{profile.Height}}</p>
+                    <p><span>Weight:</span> {{profile.Weight}}</p>
+                    <p><span>BMI:</span> {{profile.BMI}}</p>
+                    <!-- <p><span>BMI Status:</span> Normal</p>
+                    <p><span>Goal:</span> Lose Weight</p> -->
+                    <p><span>Dietary Preference:</span> {{profile.Diet}}</p>
+                </div>
+            </div>
+
+            <!-- Diet Logs Section -->
+            <div class="diet-logs">
+                <h2>Diet Logs</h2>
+
+                <!-- Sample Diet Log 1 -->
+                <div class="diet-log">
+                    <h3>Diet-1 (Type: Vegetarian)</h3>
+
+                    <p><strong>ID:</strong> {{user.id}}</p>
+                    <p><strong>Meal ID:</strong> meal_id36</p>
+
+                    <p><strong>Breakfast:</strong> Dosa x 3, Groundnut Chutney, Apple x 1</p>
+                    <p><strong>Lunch:</strong> Brown Rice, Dal, Carrots</p>
+                    <p><strong>Dinner:</strong> Idiyappam, Coconut Milk, Jaggery</p>
+                    <p class="total-calories">Total Calories Consumed: 1200 kcal</p>
+                </div>
+
+                <!-- Sample Diet Log 2 -->
+                <div class="diet-log">
+                    <h3>Diet-2 (Type: Non-Vegetarian)</h3>
+
+                    <p><strong>ID:</strong> {{user.id}}</p>
+                    <p><strong>Meal ID:</strong> meal_id47</p>
+
+                    <p><strong>Breakfast:</strong> Omelette x 2, Whole Wheat Toast, Orange x 1</p>
+                    <p><strong>Lunch:</strong> Grilled Chicken Breast, Quinoa Salad, Mixed Veggies</p>
+                    <p><strong>Dinner:</strong> Fish Curry, Brown Rice, Steamed Broccoli</p>
+                    <p class="total-calories">Total Calories Consumed: 1400 kcal</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Content: BMI Chart -->
+        <div class="bmi-chart">
+            <h3>BMI Progress</h3>
+            <!-- Placeholder for the chart, replace with actual chart later -->
+            <div class="chart">BMI Chart</div>
+        </div>
+    </section>
+</body>
+
+</html>
