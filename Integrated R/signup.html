@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Signup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f9fc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            padding: 40px;
+            text-align: center;
+            border: 2px solid #b0d4e3;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #6b93af;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        li {
+            list-style-type: none;
+            margin-bottom: 15px;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #b0d4e3;
+            border-radius: 6px;
+            width: 100%;
+            background-color: #e8f3f9;
+            color: #333;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .submit {
+            background-color: #6b93af;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit:hover {
+            background-color: #58819e;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        /* Existing User Login Link */
+        .login-link {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #6b93af;
+        }
+
+        .login-link a {
+            color: #6b93af;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+            color: #58819e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Sign Up</h1>
+        </div>
+
+        <form name="signup" action="/signup" method="post">
+            <ul>
+                <li>Username: <input type="text" name="username" required></li>
+                <li>Email: <input type="email" name="email" required></li>
+                <li>Password: <input type="password" name="password" required></li>
+                <li>Confirm Password: <input type="password" name="confirm_password" required></li>
+            </ul>
+
+            <input type="submit" class="submit" value="Sign Up">
+        </form>
+
+        <!-- Existing User Login Link -->
+        <div class="login-link">
+            If you are an existing user, <a href="/login">click here to login</a>.
+        </div>
+    </div>
+
+
+</body>
+
+</html>

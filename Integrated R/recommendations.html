@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #6b93af;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Table Styling */
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #6b93af;
+            color: white;
+            font-weight: 600;
+        }
+
+        td {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #e8f3f9;
+        }
+
+        /* No Recommendations Message */
+        p {
+            color: #666;
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Recommended Meals</h2>
+    {% if recommendations.empty %}
+    <p>No recommendations found for your profile.</p>
+    {% else %}
+    <table>
+        <tr>
+            <th>Meal ID</th>
+            <th>Name</th>
+            <th>Nutrient</th>
+            <th>Veg/Non-Veg</th>
+            <th>Review</th>
+        </tr>
+        {% for row in recommendations %}
+        <tr>
+            <td>{{ row['Meal_Id'] }}</td>
+            <td>{{ row['Name'] }}</td>
+            <td>{{ row['Nutrient'] }}</td>
+            <td>{{ row['Veg_Non'] }}</td>
+            <td>{{ row['Review'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+
+</html>
