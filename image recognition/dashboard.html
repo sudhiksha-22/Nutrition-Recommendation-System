@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Nutrivision</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #ffffff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #6b8455;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #6b8455;
+        }
+
+        /* Buttons */
+        .reco-btn,
+        .edit-btn,
+        .upload-btn {
+            background-color: #6b8455;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .reco-btn:hover,
+        .edit-btn:hover,
+        .upload-btn:hover {
+            background-color: #58819e;
+        }
+
+        .logout-btn {
+            background-color: #b91c1c;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-weight: 600;
+            color: white;
+            border: 1px solid #b91c1c;
+            text-decoration: none;
+        }
+
+        .logout-btn:hover {
+            background-color: white;
+            color: #b91c1c;
+            border: 1px solid #b91c1c;
+        }
+
+        /* Dashboard Content Styling */
+        .dashboard-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 100px;
+        }
+
+        /* User Profile and Logs Section */
+        .left-content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .box {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .user-info h2,
+        .recommendation-logs h2 {
+            font-size: 2rem;
+            color: #6b8455;
+            margin-bottom: 20px;
+        }
+
+        .user-details p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .user-details p span {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .profile-logs-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .box {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .recommendation-logs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .recommendation-logs li {
+            margin-bottom: 15px;
+        }
+
+        .recommendation-logs .date-box {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s ease;
+        }
+
+        .recommendation-logs .date-box:hover {
+            transform: scale(1.02);
+        }
+
+        .recommendation-logs .date-box a {
+            color: #6b8455;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .recommendation-logs .date-box a:hover {
+            color: #58819e;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>NUTRIVISION</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Menu</a>
+        </nav>
+        <div>
+            <a href="/image" class="upload-btn">Upload</a>
+            <a href="/logout" class="logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <section class="dashboard-content">
+        <div class="left-content">
+            <!-- User Info and Recommendation Logs -->
+            <div class="profile-logs-wrapper">
+                <div class="user-info box">
+                    <h2>User Profile</h2>
+                    <div class="user-details">
+                        <p><span>ID:</span> {{ user.id }}</p>
+                        <p><span>Name:</span> {{ profile.Name }}</p>
+                        <p><span>Age:</span> {{ profile.Age }}</p>
+                        <p><span>Height:</span> {{ profile.Height }}</p>
+                        <p><span>Weight:</span> {{ profile.Weight }}</p>
+                        <p><span>BMI:</span> {{ profile.BMI }}</p>
+                        <p><span>Dietary Preference:</span> {{ profile.Diet }}</p>
+                        <a href="{{ url_for('user_details_form') }}" class="edit-btn">Edit Profile</a>
+                        <a href="/recommendations" class="reco-btn">Recommendation</a>
+                    </div>
+                </div>
+                <div class="recommendation-logs box">
+                    <h2>Recommendation Logs by Date</h2>
+                    <ul>
+                        {% for date, meals in activity_by_date.items() %}
+                        <li>
+                            <div class="date-box">
+                                <a href="{{ url_for('recommended_meals', date=date) }}">{{ date }}</a>
+                                <span>({{ meals|length }} meals)</span>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
