@@ -1,0 +1,83 @@
+User_Id,Name,catagory,Veg_Non,Review,Nutrient,Disease,Diet
+User_User_73,bok choy salad r,salad,veg,9,fiber, goitre diabeties kidney_disease, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet vegan_diet
+User_User_98,millet curd rice r,rice,veg,2,carbohydrates, diabeties goitre heart_disease kidney_disease rickets, high_protien_diet ketogenic_diet vegan_diet
+User_User_55,methi turmeric tea r,tea,veg,2,manganese, heart_disease, ketogenic_diet
+User_User_86,tricolor veggie delight salad r,salad,veg,5,fiber, goitre diabeties kidney_disease hypertension, high_protien_diet low_fat_diet ketogenic_diet high_fiber_diet
+User_User_60,non fried masala banana chips r,banana,veg,9,selenium, cancer hypertension, ketogenic_diet high_fiber_diet alkaline_diet vegan_diet
+User_User_100,green moong cutlet r,moong,veg,5,iron, pregnancy diabeties goitre hypertension heart_disease anemia kidney_disease scurvy, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_59,no-oil vegetable pulao r,pulao,veg,10,carbohydrates, heart_disease kidney_disease scurvy, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet vegan_diet
+User_User_30,apple oats chia seeds smoothie r,smoothie,veg,9,magnesium, pregnancy diabeties goitre hypertension obesity heart_disease anemia cancer, high_protien_diet high_fiber_diet ketogenic_diet vegan_diet
+User_User_79,warm cucumber lemon salad r,salad,veg,10,fiber, goitre diabeties kidney_disease scurvy, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet
+User_User_13,turmeric milk tea r,tea,veg,1,vitamin_d, cancer heart_disease kidney_disease rickets, high_protien_diet low_fat_diet ketogenic_diet
+User_User_11,banana kheer r,kheer,veg,1,selenium, hypertension, ketogenic_diet high_fiber_diet alkaline_diet vegan_diet
+User_User_28,persian roasted egg plant salad r,salad,non-veg,4,fiber, pregnancy diabeties goitre hypertension obesity heart_disease anemia kidney_disease scurvy eye_disease rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_76,indian style kachumber salad r,salad,veg,8,fiber, goitre diabeties kidney_disease, high_protien_diet low_fat_diet ketogenic_diet high_fiber_diet
+User_User_56,konkani fried chicken r,chicken,non-veg,10,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease cancer rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_18,cheesy tandoori chicken wrap r,chicken,non-veg,3,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_67,veg fish fry r,fish,non-veg,4,vitamin_a, pregnancy diabeties goitre hypertension obesity heart_disease anemia kidney_disease cancer rickets, ketogenic_diet low_fat_diet alkaline_diet vegan_diet
+User_User_80,eggless banana pancake r,banana,veg,3,selenium, hypertension, ketogenic_diet high_fiber_diet alkaline_diet vegan_diet
+User_User_99,samak rice chilla r,rice,veg,2,carbohydrates, diabeties goitre heart_disease kidney_disease rickets, high_protien_diet ketogenic_diet vegan_diet
+User_User_58,sesame garlic egg tempura r,egg,non-veg,8,vitamin_a, pregnancy diabeties goitre hypertension obesity heart_disease kidney_disease eye_disease cancer rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet
+User_User_15,tandoori chicken puffs r,chicken,non-veg,1,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_74,cheesy paneer cigar roll r,paneer,veg,2,phosphorus, obesity, vegan_diet
+User_User_63,cheesy egg bite r,egg,non-veg,6,vitamin_a, pregnancy diabeties goitre hypertension obesity kidney_disease eye_disease rickets, high_protien_diet low_fat_diet ketogenic_diet
+User_User_34,air fryer aloo corn cutlet r,corn,veg,10,carbohydrates, diabeties, high_protien_diet vegan_diet
+User_User_92,tandoori chicken kathi roll r,chicken,non-veg,4,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_33,millet curd rice r,rice,veg,2,carbohydrates, diabeties goitre heart_disease kidney_disease rickets, high_protien_diet ketogenic_diet vegan_diet
+User_User_94,green garlic chutney r,chutney,veg,6,iron, pregnancy diabeties goitre hypertension heart_disease anemia kidney_disease scurvy cancer, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_44,taco salad r,salad,veg,6,fiber, goitre pregnancy diabeties kidney_disease, high_protien_diet low_fat_diet ketogenic_diet high_fiber_diet
+User_User_96,cheesy paneer cigar roll r,paneer,veg,2,phosphorus, obesity, vegan_diet
+User_User_65,cabbage pulao r,pulao,veg,8,vitamin_k, obesity goitre kidney_disease, high_protien_diet alkaline_diet
+User_User_93,air fryer aloo corn cutlet r,corn,veg,8,carbohydrates, diabeties, high_protien_diet vegan_diet
+User_User_54,cheesy pasta with vegetables r,pasta,veg,10,potassium, pregnancy diabeties goitre obesity heart_disease anemia kidney_disease scurvy cancer eye_disease rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_1,mango bubble tea r,tea,veg,3,manganese, heart_disease pregnancy, ketogenic_diet
+User_User_50,turmeric milk tea r,tea,veg,10,vitamin_d, cancer heart_disease kidney_disease rickets, high_protien_diet low_fat_diet ketogenic_diet
+User_User_32,konkani fried chicken r,chicken,non-veg,2,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease cancer rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_25,sliced garlic chicken r,chicken,non-veg,8,iron, pregnancy diabeties goitre hypertension obesity heart_disease anemia kidney_disease scurvy cancer rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_46,chicken keema matar r,matar,non-veg,2,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_71,butterfly chicken r,chicken,non-veg,1,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_85,diet cola chicken r,chicken,non-veg,3,iron, pregnancy diabeties goitre hypertension obesity heart_disease anemia kidney_disease scurvy cancer eye_disease rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_83,peri peri chicken rolls r,chicken,non-veg,2,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_9,gongura chicken curry r,curry,non-veg,2,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_22,black pepper chicken curry r,curry,non-veg,10,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease scurvy eye_disease rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_17,tandoori chicken puffs r,chicken,non-veg,9,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_26,peshawari chicken biryani r,biryani,non-veg,8,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_8,achaari chicken kathi roll r,chicken,non-veg,4,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_36,chicken pan-fried momos r,chicken,non-veg,9,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_51,chicken pepperoni garlic bread r,bread,non-veg,4,iron, pregnancy diabeties goitre hypertension obesity heart_disease anemia kidney_disease scurvy cancer rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_14,tandoori chicken strips r,chicken,non-veg,3,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_87,chettinad chicken biryani r,biryani,non-veg,1,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_64,boiled chicken bharta r,chicken,non-veg,8,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_27,chicken samosa r,samosa,non-veg,2,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_91,creamy chicken shawarma in a pan r,chicken,non-veg,10,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_35,tibetan-style chicken thukpa r,chicken,non-veg,9,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_90,butter chicken kathi roll r,chicken,non-veg,10,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_70,fried chicken burger r,chicken,non-veg,3,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease cancer rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_37,chicken egg parantha roll r,parantha,non-veg,6,vitamin_a, pregnancy diabeties goitre hypertension obesity anemia kidney_disease eye_disease rickets, high_protien_diet low_fat_diet ketogenic_diet vegan_diet
+User_User_53,goan chicken croquette r,chicken,non-veg,5,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_75,punjabi-style hariyali chicken r,chicken,non-veg,9,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_41,chicken yakhni pulao r,pulao,non-veg,5,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_82,chicken gyro r,chicken,non-veg,5,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_3,old delhi-style butter chicken r,chicken,non-veg,10,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_88,roasted turkey r,turkey,veg,5,iron, goitre anemia pregnancy kidney_disease, ketogenic_diet high_fiber_diet high_protien_diet alkaline_diet vegan_diet
+User_User_52,keto butter chicken r,chicken,non-veg,4,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease cancer rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_10,meat lovers pizza r,pizza,non-veg,1,potassium, pregnancy diabeties hypertension obesity heart_disease anemia kidney_disease cancer, high_protien_diet ketogenic_diet vegan_diet
+User_User_89,cheddar cheese sole fish tikka r,tikka,non-veg,9,vitamin_a, pregnancy diabeties goitre hypertension obesity heart_disease anemia kidney_disease cancer rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_81,tray roast leg of lamb r,lamb,non-veg,2,iron, pregnancy, ketogenic_diet high_fiber_diet alkaline_diet vegan_diet
+User_User_78,surmai curry with lobster butter rice r,rice,veg,10,carbohydrates, diabeties goitre heart_disease kidney_disease rickets, high_protien_diet high_fiber_diet ketogenic_diet vegan_diet
+User_User_68,seared salmon in tabasco butter r,butter,non-veg,9,calcium, pregnancy diabeties goitre heart_disease scurvy rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet vegan_diet
+User_User_20,fish with jamun sauce r,sauce,non-veg,3,vitamin_a, pregnancy diabeties goitre hypertension obesity heart_disease anemia kidney_disease cancer rickets, ketogenic_diet low_fat_diet alkaline_diet vegan_diet
+User_User_61,peshawari chicken biryani r,biryani,non-veg,6,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_97,chettinad chicken biryani r,biryani,non-veg,4,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_66,leftover chicken curry biryani r,biryani,non-veg,7,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_48,hariyali chicken biryani r,biryani,non-veg,6,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_31,chicken mandi biryani r,biryani,non-veg,1,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_57,shahi dastarkhwan chicken biryani r,biryani,non-veg,2,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_72,chicken seekh kabab pulao r,pulao,non-veg,9,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_6,chicken mayo sandwich r,chicken,non-veg,2,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_69,spicy grilled chicken r,chicken,non-veg,9,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_7,teriyaki chicken wings r,chicken,non-veg,2,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_77,sliced garlic chicken r,chicken,non-veg,1,iron, pregnancy diabeties goitre hypertension obesity heart_disease anemia kidney_disease scurvy cancer rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_21,chicken involtini r,chicken,non-veg,10,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_User_43,keto chilli garlic paneer r,paneer,veg,9,phosphorus, diabeties goitre heart_disease kidney_disease cancer, ketogenic_diet low_fat_diet alkaline_diet vegan_diet
+User_User_24,cashew egg curry r,curry,non-veg,9,vitamin_a, pregnancy diabeties goitre hypertension obesity kidney_disease eye_disease rickets, high_protien_diet low_fat_diet ketogenic_diet

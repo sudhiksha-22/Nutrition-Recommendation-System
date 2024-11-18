@@ -1,0 +1,83 @@
+User_Id,Veg_Non,Nutrient,Disease,Diet
+User_1,veg,manganese, heart_disease pregnancy, ketogenic_diet
+User_3,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_6,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_7,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_8,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_9,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_10,non-veg,potassium, pregnancy diabeties hypertension obesity heart_disease anemia kidney_disease cancer, high_protien_diet ketogenic_diet vegan_diet
+User_11,veg,selenium, hypertension, ketogenic_diet high_fiber_diet alkaline_diet vegan_diet
+User_13,veg,vitamin_d, cancer heart_disease kidney_disease rickets, high_protien_diet low_fat_diet ketogenic_diet
+User_14,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_15,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_17,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_18,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_20,non-veg,vitamin_a, pregnancy diabeties goitre hypertension obesity heart_disease anemia kidney_disease cancer rickets, ketogenic_diet low_fat_diet alkaline_diet vegan_diet
+User_21,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_22,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease scurvy eye_disease rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_24,non-veg,vitamin_a, pregnancy diabeties goitre hypertension obesity kidney_disease eye_disease rickets, high_protien_diet low_fat_diet ketogenic_diet
+User_25,non-veg,iron, pregnancy diabeties goitre hypertension obesity heart_disease anemia kidney_disease scurvy cancer rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_26,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_27,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_28,non-veg,fiber, pregnancy diabeties goitre hypertension obesity heart_disease anemia kidney_disease scurvy eye_disease rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_30,veg,magnesium, pregnancy diabeties goitre hypertension obesity heart_disease anemia cancer, high_protien_diet high_fiber_diet ketogenic_diet vegan_diet
+User_31,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_32,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease cancer rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_33,veg,carbohydrates, diabeties goitre heart_disease kidney_disease rickets, high_protien_diet ketogenic_diet vegan_diet
+User_34,veg,carbohydrates, diabeties, high_protien_diet vegan_diet
+User_35,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_36,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_37,non-veg,vitamin_a, pregnancy diabeties goitre hypertension obesity anemia kidney_disease eye_disease rickets, high_protien_diet low_fat_diet ketogenic_diet vegan_diet
+User_41,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_43,veg,phosphorus, diabeties goitre heart_disease kidney_disease cancer, ketogenic_diet low_fat_diet alkaline_diet vegan_diet
+User_44,veg,fiber, goitre pregnancy diabeties kidney_disease, high_protien_diet low_fat_diet ketogenic_diet high_fiber_diet
+User_46,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_48,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_50,veg,vitamin_d, cancer heart_disease kidney_disease rickets, high_protien_diet low_fat_diet ketogenic_diet
+User_51,non-veg,iron, pregnancy diabeties goitre hypertension obesity heart_disease anemia kidney_disease scurvy cancer rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_52,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease cancer rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_53,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_54,veg,potassium, pregnancy diabeties goitre obesity heart_disease anemia kidney_disease scurvy cancer eye_disease rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_55,veg,manganese, heart_disease, ketogenic_diet
+User_56,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease cancer rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_57,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_58,non-veg,vitamin_a, pregnancy diabeties goitre hypertension obesity heart_disease kidney_disease eye_disease cancer rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet
+User_59,veg,carbohydrates, heart_disease kidney_disease scurvy, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet vegan_diet
+User_60,veg,selenium, cancer hypertension, ketogenic_diet high_fiber_diet alkaline_diet vegan_diet
+User_61,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_63,non-veg,vitamin_a, pregnancy diabeties goitre hypertension obesity kidney_disease eye_disease rickets, high_protien_diet low_fat_diet ketogenic_diet
+User_64,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_65,veg,vitamin_k, obesity goitre kidney_disease, high_protien_diet alkaline_diet
+User_66,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_67,non-veg,vitamin_a, pregnancy diabeties goitre hypertension obesity heart_disease anemia kidney_disease cancer rickets, ketogenic_diet low_fat_diet alkaline_diet vegan_diet
+User_68,non-veg,calcium, pregnancy diabeties goitre heart_disease scurvy rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet vegan_diet
+User_69,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_70,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease cancer rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_71,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_72,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_73,veg,fiber, goitre diabeties kidney_disease, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet vegan_diet
+User_74,veg,phosphorus, obesity, vegan_diet
+User_75,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_76,veg,fiber, goitre diabeties kidney_disease, high_protien_diet low_fat_diet ketogenic_diet high_fiber_diet
+User_77,non-veg,iron, pregnancy diabeties goitre hypertension obesity heart_disease anemia kidney_disease scurvy cancer rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_78,veg,carbohydrates, diabeties goitre heart_disease kidney_disease rickets, high_protien_diet high_fiber_diet ketogenic_diet vegan_diet
+User_79,veg,fiber, goitre diabeties kidney_disease scurvy, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet
+User_80,veg,selenium, hypertension, ketogenic_diet high_fiber_diet alkaline_diet vegan_diet
+User_81,non-veg,iron, pregnancy, ketogenic_diet high_fiber_diet alkaline_diet vegan_diet
+User_82,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_83,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_85,non-veg,iron, pregnancy diabeties goitre hypertension obesity heart_disease anemia kidney_disease scurvy cancer eye_disease rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_86,veg,fiber, goitre diabeties kidney_disease hypertension, high_protien_diet low_fat_diet ketogenic_diet high_fiber_diet
+User_87,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_88,veg,iron, goitre anemia pregnancy kidney_disease, ketogenic_diet high_fiber_diet high_protien_diet alkaline_diet vegan_diet
+User_89,non-veg,vitamin_a, pregnancy diabeties goitre hypertension obesity heart_disease anemia kidney_disease cancer rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_90,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_91,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_92,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_93,veg,carbohydrates, diabeties, high_protien_diet vegan_diet
+User_94,veg,iron, pregnancy diabeties goitre hypertension heart_disease anemia kidney_disease scurvy cancer, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_96,veg,phosphorus, obesity, vegan_diet
+User_97,non-veg,iron, pregnancy diabeties goitre hypertension obesity anemia kidney_disease rickets, ketogenic_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
+User_98,veg,carbohydrates, diabeties goitre heart_disease kidney_disease rickets, high_protien_diet ketogenic_diet vegan_diet
+User_99,veg,carbohydrates, diabeties goitre heart_disease kidney_disease rickets, high_protien_diet ketogenic_diet vegan_diet
+User_100,veg,iron, pregnancy diabeties goitre hypertension heart_disease anemia kidney_disease scurvy, ketogenic_diet high_fiber_diet high_protien_diet low_fat_diet alkaline_diet vegan_diet
