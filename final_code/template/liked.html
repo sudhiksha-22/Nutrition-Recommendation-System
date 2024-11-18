@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liked Meals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #007BFF;
+        }
+
+        .meal-box {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .meal-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .meal-item:last-child {
+            border-bottom: none;
+        }
+
+        .meal-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .meal-nutrient {
+            font-size: 1rem;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Your Liked Meals</h1>
+
+    <div class="meal-box">
+        {% if liked_meals %}
+        {% for meal in liked_meals %}
+        <div class="meal-item">
+            <div class="meal-name">{{ meal['Name'].capitalize() }}</div>
+            <div class="meal-nutrient">Nutrient: {{ meal['Nutrient'] }}</div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>No liked meals found. Start liking meals in recommendations!</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f9fc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            padding: 40px;
+            text-align: center;
+            border: 2px solid #b0d4e3;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #6b93af;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        li {
+            list-style-type: none;
+            margin-bottom: 15px;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #b0d4e3;
+            border-radius: 6px;
+            width: 100%;
+            background-color: #e8f3f9;
+            color: #333;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .submit {
+            background-color: #6b93af;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit:hover {
+            background-color: #58819e;
+        }
+
+        .password, .username {
+            width: 100%;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        /* New User Register Link */
+        .register-link {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #6b93af;
+        }
+
+        .register-link a {
+            color: #6b93af;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+            color: #58819e;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Login</h1>
+    </div>
+
+    <form action='/login'  method="POST">
+        <ul>
+            <li>Username: <input class="username" type="text" name="username"></li>
+            <li>Password: <input class="password" type="password" name="password"></li>
+        </ul>
+
+        <button class="submit"> submit</button>
+    </form>
+
+    <!-- New User Register Link -->
+    <div class="register-link">
+        If you are a New User, <a href="/signup">click here to Register</a>.
+    </div>
+</div>
+
+
+</body>
+</html>

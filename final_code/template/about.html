@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Nutrivision</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #ffffff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #6b8455;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #6b8455;
+        }
+
+        /* About Section */
+        .about-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section h1 {
+            font-size: 2.5rem;
+            color: #6b8455;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            text-align: center;
+        }
+
+        .about-section hr {
+            width: 150px;
+            margin: 30px auto;
+            border: 2px solid #6b8455;
+            border-radius: 5px;
+        }
+
+        /* Developers Section */
+        .developers {
+            text-align: center;
+        }
+
+        .developers h2 {
+            font-size: 2rem;
+            color: #6b8455;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .developers h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #6b8455;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .developer-images {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .developer {
+            text-align: center;
+        }
+
+        .developer img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .developer img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .developer p {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        /* Client Section */
+        .client {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .client img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .client img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .client p {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>NUTRIVISION</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/dashboard">Dashboard</a>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h1>About the Project</h1>
+        <p>
+            <strong>Personalized Nutrition Recommendation System</strong> is a groundbreaking project designed to help users achieve their health and dietary goals through customized recommendations. By analyzing user profiles, dietary habits, and preferences, the system suggests meals tailored to individual needs. 
+            The platform ensures a seamless and intuitive experience with cutting-edge algorithms like KNN and collaborative filtering, helping users maintain a balanced and healthy lifestyle.
+        </p>
+        <hr>
+    </div>
+
+    <!-- Developers Section -->
+    <div class="about-section developers">
+        <h2>Developers</h2>
+        <div class="developer-images">
+            <div class="developer">
+                <!--<img src="path/to/image1.jpg" alt="Sudhiksha"> -->
+                <img src="{{ url_for('static', filename='sudhiksha.jpeg') }}" alt="Sudhiksha">
+                <p><strong>Name:</strong> SUDHIKSHA NB<br><strong>Reg No:</strong> 3122225002139</p>
+            </div>
+            <div class="developer">
+                <img src="{{ url_for('static', filename='yuthika.jpeg') }}" alt="Yuthika">
+                <p><strong>Name:</strong> YUTHIKA ANVITHA S<br><strong>Reg No:</strong> 3122225002159</p>
+            </div>
+            <div class="developer">
+                <img src="/static/yogeshram.jpeg" alt="Yogeshram" />
+
+                <p><strong>Name:</strong> YOGESHRAM R<br><strong>Reg No:</strong> 3122225002310</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Client Section -->
+    <div class="about-section client">
+        <h2>Client</h2>
+        <img src="path/to/client-image.jpg" alt="Client">
+        <p><strong>Client Name:</strong> Nithyashri </p>
+    </div>
+</body>
+
+</html>

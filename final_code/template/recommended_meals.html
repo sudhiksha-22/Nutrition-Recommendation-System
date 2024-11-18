@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Meals</title>
+    <style>
+        /* General body and form styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .meal-group {
+            margin-bottom: 30px;
+        }
+
+        .meal-group h2 {
+            margin-bottom: 15px;
+            text-transform: capitalize;
+            border-bottom: 2px solid #007BFF;
+            display: inline-block;
+            padding-bottom: 5px;
+            color: #007BFF;
+        }
+
+        .meal-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .meal-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .meal-row:hover {
+            background-color: #e7f0ff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .meal-row.selected {
+            background-color: #d1e7ff;
+            border: 2px solid #007BFF;
+        }
+
+        .meal-name {
+            flex: 1;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .rating {
+            flex: 1;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .rating input[type="radio"] {
+            display: none;
+        }
+
+        .rating label {
+            font-size: 2rem;
+            color: #ddd;
+            cursor: pointer;
+            transition: transform 0.2s, color 0.2s;
+        }
+
+        .rating input[type="radio"]:checked~label,
+        .rating input[type="radio"]:checked~label~label {
+            color: #ffc107;
+        }
+
+        .rating label:hover,
+        .rating label:hover~label {
+            color: #ffc107;
+            transform: scale(1.2);
+        }
+
+        .like-button {
+            flex: 1;
+            text-align: center;
+        }
+
+        .like-button input[type="checkbox"] {
+            display: none;
+        }
+
+        .like-button label {
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .like-button input[type="checkbox"]:checked+label {
+            background-color: #28a745;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let selectedMealIds = []; // To store the Meal_Id of selected meals
+
+            document.querySelectorAll('.meal-row').forEach(row => {
+                row.addEventListener('click', (event) => {
+                    const mealId = row.getAttribute('data-meal-id'); // Store the Meal_Id in a data attribute
+
+                    // Prevent toggling if the click is on a checkbox or rating label
+                    const target = event.target;
+                    if (target.tagName === 'LABEL' || target.tagName === 'INPUT') {
+                        return; // Ignore clicks on interactive elements like the rating or like buttons
+                    }
+
+                    // Toggle the selected class for visual feedback
+                    row.classList.toggle('selected');
+
+                    // Add or remove the meal ID from the selectedMealIds array
+                    if (row.classList.contains('selected')) {
+                        // Add Meal_Id to selected array
+                        if (!selectedMealIds.includes(mealId)) {
+                            selectedMealIds.push(mealId);
+                        }
+                    } else {
+                        // Remove Meal_Id from selected array
+                        selectedMealIds = selectedMealIds.filter(id => id !== mealId);
+                    }
+
+                    // Update the hidden input field with the selected meal IDs
+                    document.getElementById('selected_meals').value = selectedMealIds.join(',');
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Meals Recommended on {{ date }}</h1>
+
+    <form method="POST" action="{{ url_for('recommended_meals', date=date) }}">
+        {% for meal_type, meals in categorized_meals.items() %}
+        <div class="meal-group">
+            <h2>{{ meal_type }}</h2>
+            <div class="meal-box">
+                {% for meal in meals %}
+                <div class="meal-row" data-meal-id="{{ meal['Meal_Id'] }}">
+                    <input type="hidden" name="selected_meals" value="{{ meal['Meal_Id'] }}" id="selected_meals">
+                    <div class="meal-name">{{ meal['Name'].capitalize() }}</div>
+                    <div class="rating">
+                        <input type="radio" id="star5-{{ meal['Meal_Id'] }}" name="rating_{{ meal['Meal_Id'] }}"
+                            value="5">
+                        <label for="star5-{{ meal['Meal_Id'] }}">&#9733;</label>
+                        <input type="radio" id="star4-{{ meal['Meal_Id'] }}" name="rating_{{ meal['Meal_Id'] }}"
+                            value="4">
+                        <label for="star4-{{ meal['Meal_Id'] }}">&#9733;</label>
+                        <input type="radio" id="star3-{{ meal['Meal_Id'] }}" name="rating_{{ meal['Meal_Id'] }}"
+                            value="3">
+                        <label for="star3-{{ meal['Meal_Id'] }}">&#9733;</label>
+                        <input type="radio" id="star2-{{ meal['Meal_Id'] }}" name="rating_{{ meal['Meal_Id'] }}"
+                            value="2">
+                        <label for="star2-{{ meal['Meal_Id'] }}">&#9733;</label>
+                        <input type="radio" id="star1-{{ meal['Meal_Id'] }}" name="rating_{{ meal['Meal_Id'] }}"
+                            value="1">
+                        <label for="star1-{{ meal['Meal_Id'] }}">&#9733;</label>
+                    </div>
+                    <div class="like-button">
+                        <input type="checkbox" id="like-{{ meal['Meal_Id'] }}" name="like_{{ meal['Meal_Id'] }}" value="1">
+                        <label for="like-{{ meal['Meal_Id'] }}">Like</label>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+
+        <button type="submit">Save Selections</button>
+    </form>
+
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+
+</html>

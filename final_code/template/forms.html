@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "SUSE", sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            text-align: center;
+            font-size: 48px;
+            margin: 20px 0;
+        }
+
+        #sub {
+            font-size: 18px;
+            color: #555;
+        }
+
+        form {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-group,
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            justify-content: flex-start;
+        }
+
+        label {
+            width: 200px;
+            font-size: 16px;
+            margin-right: 20px;
+            text-align: right;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: "SUSE", sans-serif;
+            font-size: 16px;
+            flex: 1;
+            width: 100%;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: flex-start;
+            /* Align items to the left */
+            gap: 0;
+            /* No gap between age and gender fields */
+            align-items: center;
+        }
+
+        .form-row .form-group {
+            flex: none;
+            margin-right: 10px;
+            /* Small gap between fields */
+        }
+
+        .form-row .form-group input[type="number"],
+        .form-row .form-group select {
+            width: 180px;
+            /* Adjusted width to fit better */
+        }
+
+        .submit-btn {
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            font-family: "SUSE", sans-serif;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            display: block;
+            width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        .submit-btn:active {
+            background-color: #3e8e41;
+            transform: scale(0.98);
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Build your meal plan</p>
+    <p id="sub">Let's find out how much you should eat!</p>
+
+    <form id="form" action="/details" method="POST">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ profile.Name }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ profile.Email }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" value="{{ profile.Age }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male" {% if profile.Gender == "male" %}selected{% endif %}>Male</option>
+                <option value="female" {% if profile.Gender == "female" %}selected{% endif %}>Female</option>
+                <option value="other" {% if profile.Gender == "other" %}selected{% endif %}>Other</option>
+            </select>
+        </div>
+
+        </div>
+
+        <div class="form-group">
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height" value="{{ profile.Height }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" value="{{ profile.Weight }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bmi">BMI:</label>
+            <input type="text" id="bmi" name="bmi" value="{{ profile.BMI }}" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>Health Conditions:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="health[]" value="heart_disease"> Heart Disease</label>
+                <label><input type="checkbox" name="health[]" value="hypertension"> Hypertension</label>
+                <label><input type="checkbox" name="health[]" value="obesity"> Obesity</label>
+                <label><input type="checkbox" name="health[]" value="diabetes"> Diabetes</label>
+                <label><input type="checkbox" name="health[]" value="kidney_disease"> Kidney Disease</label>
+                <label><input type="checkbox" name="health[]" value="pregnancy"> Pregnancy</label>
+                <label><input type="checkbox" name="health[]" value="cancer"> Cancer</label>
+                <label><input type="checkbox" name="health[]" value="rickets"> Rickets</label>
+                <label><input type="checkbox" name="health[]" value="scurvy"> Scurvy</label>
+                <label><input type="checkbox" name="health[]" value="anemia"> Anemia</label>
+                <label><input type="checkbox" name="health[]" value="goitre"> Goitre</label>
+                <label><input type="checkbox" name="health[]" value="eye_disease"> Eye Disease</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Diet Preference:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="diet[]" value="vegan_diet"> Vegan Diet</label>
+                <label><input type="checkbox" name="diet[]" value="high_protein_diet"> High Protein Diet</label>
+                <label><input type="checkbox" name="diet[]" value="type_a_diet"> Type A Diet</label>
+                <label><input type="checkbox" name="diet[]" value="type_o_diet"> Type O Diet</label>
+                <label><input type="checkbox" name="diet[]" value="paleo_diet"> Paleo Diet</label>
+                <label><input type="checkbox" name="diet[]" value="low_sodium_diet"> Low Sodium Diet</label>
+                <label><input type="checkbox" name="diet[]" value="low_fat_diet"> Low Fat Diet</label>
+                <label><input type="checkbox" name="diet[]" value="gluten_free_diet"> Gluten Free Diet</label>
+                <label><input type="checkbox" name="diet[]" value="high_fiber_diet"> High Fiber Diet</label>
+                <label><input type="checkbox" name="diet[]" value="hormone_diet"> Hormone Diet</label>
+                <label><input type="checkbox" name="diet[]" value="mediterranean_diet"> Mediterranean Diet</label>
+                <label><input type="checkbox" name="diet[]" value="low_carb_diet"> Low Carb Diet</label>
+                <label><input type="checkbox" name="diet[]" value="alkaline_diet"> Alkaline Diet</label>
+                <label><input type="checkbox" name="diet[]" value="ketogenic_diet"> Ketogenic Diet</label>
+                <label><input type="checkbox" name="diet[]" value="dash_diet"> Dash Diet</label>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="food_preference">Food Preference:</label>
+            <select id="food_preference" name="food_preference" required>
+                <option value="veg">Vegetarian</option>
+                <option value="non_veg">Non-Vegetarian</option>
+            </select>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <script>
+        const heightInput = document.getElementById('height');
+        const weightInput = document.getElementById('weight');
+        const bmiOutput = document.getElementById('bmi');
+
+        heightInput.addEventListener('input', calculateBMI);
+        weightInput.addEventListener('input', calculateBMI);
+
+        function calculateBMI() {
+            const height = heightInput.value / 100;
+            const weight = weightInput.value;
+            if (height > 0 && weight > 0) {
+                const bmi = (weight / (height * height)).toFixed(2);
+                bmiOutput.value = bmi;
+            } else {
+                bmiOutput.value = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

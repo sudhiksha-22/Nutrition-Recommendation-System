@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #6b8455;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #6b8455;
+        }
+
+        /* Feedback Form */
+        .feedback-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .feedback-container h2 {
+            font-size: 2rem;
+            color: #6b8455;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #6b8455;
+            box-shadow: 0 0 10px rgba(107, 132, 85, 0.2);
+        }
+
+        .submit-btn {
+            background-color: #6b8455;
+            color: #fff;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #58819e;
+        }
+
+        .submit-btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>NUTRIVISION</h1>
+        <nav>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/about">About</a>
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+
+    <div class="feedback-container">
+        <h2>Feedback Form</h2>
+        <form action="/feedback" method="POST">
+            <!-- Prefilled User Details -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="{{ profile.Name }}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="{{ profile.Email }}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age" value="{{ profile.Age }}" readonly>
+            </div>
+
+            <!-- Feedback Fields -->
+            <div class="form-group">
+                <label for="meal_feedback">Feedback on Recommended Meals:</label>
+                <textarea id="meal_feedback" name="Meal_Feedback" placeholder="Share your thoughts on the recommended meals..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="model_feedback">Feedback on Image Recognition Model:</label>
+                <textarea id="model_feedback" name="Model_Feedback" placeholder="Share your thoughts on the image recognition model..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="general_feedback">General Feedback:</label>
+                <textarea id="general_feedback" name="General_Feedback" placeholder="Any other constructive feedback?"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="rating">Overall Experience:</label>
+                <select id="rating" name="rating">
+                    <option value="">Select a Rating</option>
+                    <option value="1">1 - Poor</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="3">3 - Good</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"  action="/dashboard" class="submit-btn">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+
+</html>
